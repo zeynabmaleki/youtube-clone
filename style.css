@@ -11,7 +11,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    /*
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    */
     gap: 20px;
 }
 
@@ -36,7 +38,7 @@ body {
 
 .side-menu ul {
     list-style: none;
-    padding: 45px 0 0 0;
+    padding: 70px 0 0 10px;
     margin: 0;
 }
 
@@ -48,16 +50,19 @@ body {
     align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    margin-right: 15px;
+    margin-left: 10px;
+    border-radius: 10px;
 }
 
 .side-menu li i {
-    margin-right: 10px;
+    margin-right: 30px;
     font-size: 20px;
 }
 
 .side-menu li:hover {
     background-color: #f2f2f2;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .side-menu li.active {
@@ -78,14 +83,12 @@ body {
     font-size: 24px;
     margin: 10px;
     cursor: pointer;
-    /*
-    position: fixed;
-        top : 10px;
-    left : 10px;
-    */
-
     z-index: 101;
+}
 
+#menu-icon i :hover {
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
 
 /*!------------------------logo-----------------------------*/
@@ -151,8 +154,49 @@ body {
     width: 100%;
     padding: 0 20px;
     gap: 15px;
+    font-size: 20px;
 }
 
 .navbar-icons div {
     cursor: pointer;
+}
+
+/*!------------------------shortcut menu-----------------------------*/
+
+
+.shortcut-menu {
+    position: fixed;
+    top: 100px;
+    left: 0px;
+    height: 100%;
+    width: 75px;
+    background-color: #ffffff;
+    /*margin: 0 5px 0 5px;*/
+}
+
+.shortcut-menu-item {
+    margin-left: 6.5px;
+}
+
+
+.shortcut-menu-item i {
+    font-size: 20px;
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shortcut-menu-item span {
+    padding: 5px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.shortcut-menu :hover {
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
