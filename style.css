@@ -166,7 +166,7 @@ body {
 
 .shortcut-menu {
     position: fixed;
-    top: 100px;
+    top: 69px;
     left: 0px;
     height: 100%;
     width: 75px;
@@ -199,4 +199,37 @@ body {
 .shortcut-menu :hover {
     background-color: #f2f2f2;
     border-radius: 10px;
+}
+
+/*!------------------------video section-----------------------------*/
+
+
+.video-section {
+    display: flex;
+    flex-wrap: flex;
+    gap: 15px;
+}
+
+.video {
+    border: 1px solid #f2f2f2;
+    width: 300px;
+    padding: 10px;
+}
+
+.video img {
+    max-width: 100%;
+}
+
+.video-info {
+    margin-top: 10px;
+}
+
+.video-title {
+    font-weight: bold;
+}
+
+.video-channel,
+.video-views {
+    font-size: 0.9em;
+    color: gray;
 }
