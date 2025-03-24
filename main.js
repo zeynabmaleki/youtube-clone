@@ -149,3 +149,19 @@ addVideo({
     views: "32K Views • 1 year ago"
 });
 
+
+
+
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+const body = document.body;
+
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+
+    // Optionally update the button text
+    if (body.classList.contains('dark-theme')) {
+        themeToggleBtn.textContent = 'Light Theme';
+    } else {
+        themeToggleBtn.textContent = 'Dark Theme';
+    }
+});
