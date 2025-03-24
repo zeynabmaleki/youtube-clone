@@ -1,13 +1,15 @@
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
-    --navbar-color: #f1f1f1;
+    --navbar-color: #ffffff;
+    --hover-color: #f2f2f2;
 }
 
 .dark-theme {
     --background-color: #222222;
     --text-color: #ffffff;
-    --navbar-color: #333333;
+    --navbar-color: #222222;
+    --hover-color: #333333;
 }
 
 body {
@@ -20,12 +22,27 @@ body {
 
 .navbar {
     background-color: var(--navbar-color);
+    transition: background-color 0.3s ease;
 }
+
+
+.side-bar {
+    background-color: var(--navbar-color);
+    transition: background-color 0.3s ease;
+}
+
+.side-menu ul li {
+    color: var(--text-color);
+}
+
+
 
 /*!------------------------navbar-----------------------------*/
 
 .navbar {
+    /*
     background-color: #ffffff;
+    */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +62,9 @@ body {
     height: 100%;
     width: 250px;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    /*
     background-color: #ffffff;
+    */
     z-index: 100;
     transition: transform 0.3s ease;
 }
@@ -80,9 +99,10 @@ body {
 }
 
 .side-menu li:hover {
-    background-color: #f2f2f2;
+    background-color: var(--hover-color); /* Theme-aware hover color */
     border-radius: 10px;
 }
+
 
 .side-menu li.active {
     background-color: #f2f2f2;
@@ -105,10 +125,11 @@ body {
     z-index: 101;
 }
 
-#menu-icon i :hover {
-    background-color: #f2f2f2;
+#menu-icon i:hover {
+    background-color: var(--hover-color); /* Theme-aware hover color */
     border-radius: 10px;
 }
+
 
 /*!------------------------logo-----------------------------*/
 
@@ -189,8 +210,9 @@ body {
     left: 0px;
     height: 100%;
     width: 75px;
+    /*
     background-color: #ffffff;
-    /*margin: 0 5px 0 5px;*/
+    margin: 0 5px 0 5px;*/
 }
 
 .shortcut-menu-item {
@@ -214,9 +236,14 @@ body {
     align-items: center;
     font-size: 13px;
 }
-
+/*
 .shortcut-menu :hover {
     background-color: #f2f2f2;
+    border-radius: 10px;
+}*/
+
+.shortcut-menu-item:hover {
+    background-color: var(--hover-color); /* Theme-aware hover color */
     border-radius: 10px;
 }
 
@@ -254,4 +281,10 @@ body {
 .video-views {
     font-size: 0.9em;
     color: gray;
+}
+
+.side-menu li,
+.shortcut-menu-item,
+#menu-icon i {
+    transition: background-color 0.3s ease;
 }

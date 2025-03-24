@@ -158,10 +158,4 @@ const body = document.body;
 themeToggleBtn.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
 
-    // Optionally update the button text
-    if (body.classList.contains('dark-theme')) {
-        themeToggleBtn.textContent = 'Light Theme';
-    } else {
-        themeToggleBtn.textContent = 'Dark Theme';
-    }
 });
